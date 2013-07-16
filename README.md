@@ -5,13 +5,10 @@ configure both the machine and your individual development environment as
 follows:
 
 ```sh
-cd $HOME
-sudo apt-get install -y git-core
-git clone https://github.com/startup-class/setup.git
-./setup/setup.sh   
+curl https://raw.github.com/elyezer/startup-class-setup/master/setup.sh | bash
 ```
 
-See also http://github.com/startup-class/dotfiles and
+See also https://github.com/elyezer/startup-class-dotfiles and
 [Startup Engineering Video Lectures 4a/4b](https://class.coursera.org/startup-001/lecture/index)
 for more details.
 
