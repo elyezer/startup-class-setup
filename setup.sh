@@ -48,3 +48,9 @@ ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 ln -sf dotfiles/.gitconfig .
 
+# Generate ssh key pair
+ssh-keygen -t rsa
+
+# Login to Heroku and add the key
+heroku login
+heroku keys:add
