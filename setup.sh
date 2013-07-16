@@ -2,9 +2,15 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
+# Install Git
+sudo apt-get install -y git-core
+
+# Install Heroku toolbelt
+# https://toolbelt.heroku.com/debian
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+
 # Install nvm: node-version manager
 # https://github.com/creationix/nvm
-sudo apt-get install -y git-core
 curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 # Load nvm and install latest production node
