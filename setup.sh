@@ -2,8 +2,8 @@
 # Simple setup.sh for configuring Ubuntu 12.04 LTS EC2 instance
 # for headless setup. 
 
-# Install Git
-sudo apt-get install -y git-core
+# Install required packages
+sudo apt-get install -y git-core python-software-properties
 
 # Install Heroku toolbelt
 # https://toolbelt.heroku.com/debian
@@ -15,12 +15,12 @@ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
 # Load nvm and install latest production node
 source $HOME/.nvm/nvm.sh
-nvm install v0.10.12
-nvm use v0.10.12
+nvm install 0.10
+nvm use 0.10
 
 # Install jshint to allow checking of JS code within emacs
 # http://jshint.com/
-npm install -g jshint
+npm install jshint
 
 # Install rlwrap to provide libreadline features with node
 # See: http://nodejs.org/api/repl.html#repl_repl
@@ -50,7 +50,3 @@ ln -sf dotfiles/.gitconfig .
 
 # Generate ssh key pair
 ssh-keygen -t rsa
-
-# Login to Heroku and add the key
-heroku login
-heroku keys:add
